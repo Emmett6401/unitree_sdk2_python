@@ -22,6 +22,17 @@ git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
 cd unitree_sdk2_python
 pip3 install -e .
 ```
+위에서 pip3 install -e . 는 다음과 같은 의미를 갖는다
+-e 또는 --editable 옵션
+– “개발 모드(Editable Mode)”로 설치하라는 의미이다.
+– 일반 설치는 소스 코드를 복사해 가상환경의 site-packages에 넣지만, editable 설치는 소스 디렉터리를 가리키는 링크만 생성한다.
+– 즉, 소스 파일을 수정하면 바로 변경 사항이 반영되므로 개발·디버깅이 편리하다.
+
+.
+– 현재 디렉터리를 가리킨다.
+– 이 위치에 setup.py 또는 pyproject.toml 같은 패키지 메타데이터가 있어야 한다.
+– pip는 이 파일을 읽어 패키지 이름, 버전, 의존성 정보를 확인해 설치를 진행한다.
+
 ## FAQ
 ##### 1. Error when `pip3 install -e .`:
 ```bash
